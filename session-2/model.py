@@ -8,9 +8,9 @@ class MyModel(nn.Module):
         self.conv1 = ConvBlock(1,6,5)
         self.conv2 = ConvBlock(6,16,5)
         self.conv3 = ConvBlock(16,32,5)
-        self.mlp = nn.Sequential( nn.Linear(400, 120),
+        self.mlp = nn.Sequential( nn.Linear(800, 240),
                             nn.ReLU(),
-                            nn.Linear(120,84),
+                            nn.Linear(240,84),
                             nn.ReLU(),
                             nn.Linear(84,15),
                             nn.LogSoftmax(dim=1))
